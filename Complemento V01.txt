@@ -1,0 +1,36 @@
+Temos o Cinema Plus, um site responsivo para um streaming de filmes. 
+   A maioria das imagens utilizadas no projeto terão apenas uma descrição e as suas dimensões. Focando no objetivo do projeto que é a apreendizagem da
+linguagem HTML e do CSS, não necessitando assim de ferramentas de design online como por exemplo o Figma.
+
+   No HTML temos uma section com duas classes, a .principal que é a .contenier que será utilizada em outras sections. Também temos um título <h1>, 
+e uma imagem, utilizando de forma responsiva um alt, para pessoas que necessitem de um leitor de tela.
+
+  No CSS é necessário, de forma responsiva, definir algumas variáveis que serão utilizadas durante todo projeto, para isso utilizamos o :root{} 
+e -- para definir uma variável.   
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+}
+  Para utlizar uma variável no CSS é necessário aplicar var(--nome-da-variavel):
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+}
+
+Para outras duas classes faremos:
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+O background-repeat: no-repeat é para não ocorrer repetição da imagem de fundo e o background-size: contain é para preencher toda a section.
+
+.container {
+    height: 100vh;
+}
+
