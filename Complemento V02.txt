@@ -1,0 +1,55 @@
+HTML uma <div> foi adicionada, além de 2 botões para assinaturas de planos e um aviso.
+Classe para ambos os botões, para o aviso e também para o <h1> foram implementadas.
+
+A explicação de algumas das estilizações das novas classes no CSS a seguir:
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+  Importante no body é font-size: 16px, sabe-se que aproxidamente 1 rem = 16 px. Lembrando que o rem refere-se ao tamanho da fonte do HTML, e o 
+em refere-se ao tamanho da fonte do elemento pai. Resumindo 1rem possui um valor constante e o 1em pode variar.
+
+Aconselho agora a fazer um comando por vez na estilização da classe .container-botao e botao-secundario para fins didáticos.
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+}
+
+Atente ao comando display: block , pois sem ele por padrão a imagem e os botões ficam alinhados, pois seus display são do tipo inline.
+Então para um botão ocupar todo bloco será utilizado  display: block. Lembrando text-decoration: none retira a decorão do texto do botão.
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
+}
+
+background-color: transparent deixa a cor de fundo do botão transparente.
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+Após estilizar os botões, aplique o grid na classe .container:
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+O grid pode dividir a tela em até 12 colunas, assim consiguimos restringir nosso conteúdo da <div> para metade da tela com grid-template-columns: 50% 50%
