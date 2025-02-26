@@ -1,0 +1,62 @@
+No código HTML temos a adição de 3 sections, cada um com a classe container e secundario assim como a adição de 3 imagens para cada section.
+    
+    Apesar de serem imagens meramente ilustrativas, para composição do código html e css, seria interessante que ela venham a possuir 
+transparência dando ênfase a cor do background do site.
+
+   As classes descricao__titulo, descricao__texto, secundario__imagem, container__descricao, e secundario foram criadas e precisam de estilização.
+container__imagem e container__caixa foram criadas na primeira section e também necessitam de estilização.
+
+Aconselho a fazer as mudanças do CSS comando por comando. As são as seguintes:
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+Na .principal foram adicionados align-items: center e text-align: center, para alinhar no centro da coluna os elementos da primeira section.
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+  .container__imagem a margin será aplicada no sentido horário do relógio: topo, direita, fundo e esquerda, já o .container__caixa aplicada
+na vertical e depois na horizontal. margin: 2em por exemplo, aplica o mesmo valor em todas as direções
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+ display: inline-block é uma mistura do display inline com o block. O inline transforma o elemento em linha, então colocando outro elemento no
+bloco ele ficaria ao lado do botão. O block produz uma quebra linha, utilizada para quebrar a linha do texto acima.
+
+.container__descricao {
+    padding: 2em;
+}
